@@ -1,11 +1,9 @@
-
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.qenherkhopeshef.jsesh</groupId>
         <artifactId>JSesh-all</artifactId>
-        <version>7.5.5</version>
+        <version>7.6.0-SNAPSHOT</version>
     </parent>
     <artifactId>jsesh</artifactId>
     <packaging>jar</packaging>
@@ -14,8 +12,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <build>
-        <plugins>            
-            <!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-compiler-plugin</artifactId> -->
+        <plugins>
             <plugin>
                 <groupId>org.qenherkhopeshef.jsesh</groupId>
                 <artifactId>cupAndlex</artifactId>
@@ -32,7 +29,6 @@
                             <parserName>MDCParse</parserName>
                             <symbolsName>MDCSymbols</symbolsName>
                             <grammarFilePath>${basedir}/src/jcup/MDCParse.y</grammarFilePath>
-                            
                             <parserPackage>jsesh.mdc.parser</parserPackage>
                             <lexerPackage>jsesh.mdc.lex</lexerPackage>
                             <lexDef>${basedir}/src/jlex/MDCLexAux.l</lexDef>
@@ -68,43 +64,7 @@
                 <directory>src/main/filtered-resources</directory>
                 <filtering>true</filtering>
             </resource>
-        </resources>
-        <pluginManagement>
-            <plugins>
-                <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
-                <plugin>
-                    <groupId>org.eclipse.m2e</groupId>
-                    <artifactId>lifecycle-mapping</artifactId>
-                    <version>1.0.0</version>
-                    <configuration>
-                        <lifecycleMappingMetadata>
-                            <pluginExecutions>
-                                <pluginExecution>
-                                    <pluginExecutionFilter>
-                                        <groupId>
-                                            org.qenherkhopeshef.jsesh
-                                        </groupId>
-                                        <artifactId>
-                                            cupAndlex
-                                        </artifactId>
-                                        <versionRange>
-                                            [1,)
-                                        </versionRange>
-                                        <goals>
-                                            <goal>lex</goal>
-                                            <goal>cup</goal>
-                                        </goals>
-                                    </pluginExecutionFilter>
-                                    <action>
-                                        <execute/>
-                                    </action>
-                                </pluginExecution>
-                            </pluginExecutions>
-                        </lifecycleMappingMetadata>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
+        </resources>       
     </build>
     <dependencies>
         <dependency>
@@ -136,6 +96,6 @@
             <groupId>org.swinglabs</groupId>
             <artifactId>swing-layout</artifactId>
             <version>1.0.3</version>
-        </dependency>        
+        </dependency>
     </dependencies>
 </project>

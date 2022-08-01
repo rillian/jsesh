@@ -9,13 +9,11 @@ developed by Serge Rosmorduc (serge.rosmorduc@qenherkhopeshef.org)
 
 JSesh developpers :
 - Serge J.-P. Thomas : most of the fonts
-- S. Rosmorduc : almost all the code, a few glyphs in the fonts
+- Serge Rosmorduc : almost all the code, a few glyphs in the fonts
 - Wayne Collins (CVS, ant improvement)
 
 
 Licences for the various libraries used by JSesh can be found in resources/licenses
-
-
 
 ## Source Content 
 Contains the following folders and modules:
@@ -41,7 +39,6 @@ Contains the following folders and modules:
 * codeDumper : a small software to create a dump of JSesh files, 
   as simple lists of codes.
 
-
 ## Files and Folders not part of the general maven architecture
 
 * README.md : this file
@@ -51,7 +48,8 @@ Contains the following folders and modules:
     proof-of-concept)
 
 ## Working with eclipse:
-there seems to be a problem with the eclipse plugin for maven regarding generated sources:
+
+There seems to be a problem with the eclipse plugin for maven regarding generated sources:
 the "jsesh" maven module will report missing classes in eclipse.
 
 A quick fix:
@@ -66,6 +64,12 @@ A quick fix:
 		do the same for the target/generated sources/lex folder.
 		
 That's it.
+
+## Working with VSCode
+
+Interaction between VSCode and Maven is not that easy (again, because of generated files). I'm not sure I will spend the time to do it.
+
+
 
 ## Building distributions
 
